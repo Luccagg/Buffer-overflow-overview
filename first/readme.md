@@ -1,11 +1,10 @@
 # x86 processor 
-The first four registers (EAX, ECX, EDX, and EBX) are known as general-
-purpose registers. These are called the Accumulator, Counter, Data, and Base
+The first four registers (EAX, ECX, EDX, and EBX) are known as general-purpose registers. These are called the Accumulator, Counter, Data, and Base
 registers, respectively. They are used for a variety of purposes, but they mainly
 act as temporary variables for the CPU when it is executing machine
 instructions.
-The second four registers (ESP, EBP, ESI, and EDI) are also general-
-purpose registers, but they are sometimes known as pointers and indexes.
+The second four registers (ESP, EBP, ESI, and EDI) are also general-purpose registers, but they are sometimes known as pointers and indexes.
+
 These stand for Stack Pointer, Base Pointer, Source Index, and Destination Index,
 respectively. The first two registers are called pointers because they store 32-bit
 addresses, which essentially point to that location in memory. These registers
