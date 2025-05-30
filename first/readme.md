@@ -10,5 +10,6 @@ respectively. The first two registers are called pointers because they store 32-
 addresses, which essentially point to that location in memory. These registers
 are fairly important to program execution and memory management; we will
 discuss them more later.
+
 The EIP register is the Instruction Pointer register, which points to the
 current instruction the processor is reading.
