@@ -11,22 +11,17 @@ int find_user_note(int, int);
 int search_note(char *, char *);
 void fatal(char *);
 
-// Note printing function.
-// Seek in file for a note for user.
-// Search for keyword function.
-// Fatal error handler
-
 int main(int argc, char *argv[]) {
     int userid, printing = 1, fd; // File descriptor
     char searchstring[100];
 
     if(argc > 1)
-        strcpy(searchstring, argv[1]); // If there is an arg, that is the search string
+        strcpy(searchstring, argv[1]); 
     else
-        searchstring[0] = 0;           // otherwise, search string is empty.
+        searchstring[0] = 0;           
 
     userid = getuid();
-    fd = open(FILENAME, O_RDONLY);     // Open the file for read-only access.
+    fd = open(FILENAME, O_RDONLY);     .
     if(fd == -1)
         fatal("in main() while opening file for reading");
 
@@ -66,16 +61,16 @@ int find_user_note(int fd, int user_uid) {
     unsigned char byte;
     int length;
 
-    while(note_uid != user_uid) {       // Loop until a note for user_uid is found.
-        if(read(fd, &note_uid, 4) != 4) // Read the uid data.
-            return -1;                   // If 4 bytes aren't read, return end of file code.
-        if(read(fd, &byte, 1) != 1)     // Read the newline separator.
+    while(note_uid != user_uid) {       
+        if(read(fd, &note_uid, 4) != 4) 
+            return -1;                   
+        if(read(fd, &byte, 1) != 1)     
             return -1;
 
         byte = length = 0;
-        while(byte != '\n') {           // Figure out how many bytes to the end of line.
-            if(read(fd, &byte, 1) != 1) // Read a single byte.
-                return -1;              // If byte isn't read, return end of file code.
+        while(byte != '\n') {           
+            if(read(fd, &byte, 1) != 1) 
+                return -1;              
             length++;
         }
     }
@@ -91,17 +86,17 @@ int search_note(char *note, char *keyword) {
     int i, keyword_length, match = 0;
 
     keyword_length = strlen(keyword);
-    if(keyword_length == 0)             // If there is no search string,
-        return 1;                       // always "match".
+    if(keyword_length == 0)             
+        return 1;                       
 
-    for(i = 0; i < strlen(note); i++) { // Iterate over bytes in note.
-        if(note[i] == keyword[match])   // If byte matches keyword,
-            match++;                    // get ready to check the next byte;
+    for(i = 0; i < strlen(note); i++) { 
+        if(note[i] == keyword[match])   
+            match++;                    
         else {
-            if(note[i] == keyword[0])   // if that byte matches first keyword byte,
-                match = 1;             // start the match count at 1.
+            if(note[i] == keyword[0])   
+                match = 1;             
             else
-                match = 0;              // Otherwise it is zero.
+                match = 0;              
         }
 
         if(match == keyword_length)     // If there is a full match,
