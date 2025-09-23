@@ -1,4 +1,4 @@
-# Exploitation
+# Buffer Overflow
 
 .AKA programming in C, disassembling the binary on an old version of Ubuntu and hopefully finding some memory corruptions, so we can exploit!
 
