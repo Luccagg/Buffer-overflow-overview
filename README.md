@@ -42,4 +42,4 @@ The family of x86 processors, including those from Intel and AMD, predominantly 
 So to control exactly how the data is stored inside some arbitrary memory address we use the little-endian byte ordering. Example writing `deadbeef` into the address `0xbffff7f4` of the `int value = 5;`, we need to calculate the distance between the address of the `buffer_two` where our input goes, and then write the payload using the least byte ordering
 
 ![t](img/6.png)
-![t](img/7.png)
+![t](img/8.png)
