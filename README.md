@@ -31,5 +31,5 @@ listing of memory, toward lower memory addresses.
 
 ![t](img/2.png)
 
-Because the stack is a FILO (first in, last out)type system, the first declared variables will be allocated first in the stack frame(bottom), and the lasted one in the topp, so even tho we only have access tho the lasted variables, we can overflow our input to leak to lower variables in the stack frame.
+Because the stack is a FILO (first in, last out)type system, the first declared variables will be allocated first in the stack frame(bottom), and the lasted one in the topp, so even tho we only have access tho the lasted variables, we can overflow our input to leak to lower variables in the stack frame. So we can see that after `line 12:strcpy(buffer_two, argv[1]);` our input will overflow of the `buffer_two` to the addresses below him in the stack frame, thats it the variables declared before the `buffer_two`
 
