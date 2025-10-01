@@ -37,6 +37,8 @@ Because the stack is a FILO (first in, last out)type system, the first declared 
 
 The family of x86 processors, including those from Intel and AMD, predominantly use little-endian byte ordering. Thats mean a byte-ordering scheme in which the least significant byte (the "little" end) of a multi-byte data value is stored at the lowest memory address. In other words, when we input a string into a buffer, lets say "ABCD" in the memory the first charachter stored is "D" then "C" etc...
 
+![t](img/7.png)
+
 So to control exactly how the data is stored inside some arbitrary memory address we use the little-endian byte ordering. Example writing `deadbeef` into the address `0xbffff7f4` of the `int value = 5;`, we need to calculate the distance between the address of the `buffer_two` where our input goes, and then write the payload using the least byte ordering
 
 ![t](img/6.png)
