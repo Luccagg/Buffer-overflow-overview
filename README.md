@@ -35,7 +35,7 @@ Because the stack is a FILO (first in, last out)type system, the first declared 
 
 ![t](img/5.png)
 
-The family of x86 processors, including those from Intel and AMD, predominantly use little-endian byte ordering. Thats mean a byte-ordering scheme in which the least significant byte (the "little" end) of a multi-byte data value is stored at the lowest memory address. In other words, when we input a string into a buffer, lets say "ABCD" in the memory the first charachter stored is "D" then "C" etc...
+The family of x86 processors, including those from Intel and AMD, predominantly use little-endian byte ordering. Thats mean a byte-ordering scheme in which the least significant byte (the "little" end) of a multi-byte data value is stored at the lowest memory address. In other words, when we input a string into a buffer, lets say "ABCD" in the memory the first charachter stored is "D" then "C" etc... You can verify that it is true because the hexadecimal value of A is `0x41`, the value of B is `0x42`...
 
 ![t](img/7.png)
 
