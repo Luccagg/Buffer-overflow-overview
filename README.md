@@ -44,4 +44,4 @@ So to control exactly how the data is stored inside some arbitrary memory addres
 ![t](img/6.png)
 ![t](img/8.png)
 
-**What's that useful for?** : Like i said the processor has a register (a pointer) called eip that "points" to the address that the cpu should execute. If we have a way to overflow our data into one address that eip will read while the program runs, we can achieve code execution inside the cpu, thus we can achieve **root** aka **privilege escalation**.
+**What's that useful for?** : Like i said the processor has a register (a pointer) called eip that "points" to the address that the cpu should execute. If we have a way to overflow our data into one address that eip will read while the program runs, we can achieve code execution inside the cpu.
